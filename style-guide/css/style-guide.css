@@ -1,0 +1,87 @@
+/* Basic styling for style guide */
+
+main {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.main-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    padding-top: 80px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  main {
+    max-width: none;
+    padding: 120px 0 50px;
+  }
+  main.main-header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 80px;
+    line-height: 80px;
+    width: 400px;
+    margin: 0 0 0 -200px;
+    font-size: 2.6rem;
+    z-index: 20;
+  }
+}
+
+section {
+  margin: 3em 0;
+}
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+}
+
+/* xColor section - basic style */
+.cd-colors ul {
+  list-style: none;
+}
+
+.cd-colors li {
+  text-align: center;
+  width: 48%;
+  float: left;
+  margin: 0 4% 1em 0;
+}
+.cd-colors li:nth-of-type(2n) {
+  margin-right: 0;
+}
+.cd-colors .cd-color-swatch {
+  position: relative;
+  width: 100%;
+  padding: 50% 0;
+}
+.cd-colors .cd-color-swatch::before,
+.cd-colors .cd-color-swatch::after {
+  /* lighter and darker color shades of the same swatch */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 20%;
+}
+.cd-colors .cd-color-swatch::before {
+  left: 0;
+}
+.cd-colors .cd-color-swatch::after {
+  right: 0;
+}
