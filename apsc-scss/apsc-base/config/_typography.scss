@@ -1,11 +1,13 @@
 /* Typography Variables */
-$font-primary:'Whitney SSm A', 'Whitney SSm B', Arial, sans-serif;
+$font-primary:'Whitney SSm A', 'Whitney SSm B', Arial, sans-serif !default;
 
-$font-size-base: 16px;
-$font-size-md: $font-size-base*1.25;
-$font-size-lg: $font-size-base*1.5;
-$font-size-gal: $font-size-base*1.125;
+$font-size-base: 16px !default;
+$font-size-md: $font-size-base*1.25 !default;
+$font-size-lg: $font-size-base*1.5 !default;
+$font-size-gal: $font-size-base*1.125 !default;
 
-$font-weight-medium: 500;
+$font-weight-medium: 500 !default;
  
-$line-height-base: 24px;
+$line-height-base: 24px !default;
+
+// $font-weights: ("regular": 400, "medium": 500, "bold": 700); // should we use a map for all of our font weights?
