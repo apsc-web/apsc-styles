@@ -1,0 +1,11 @@
+html{ 
+    font-size: 100%;/*for using REM units*/
+}
+
+body{
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    font-weight: 400; // should we include this in a map?
+    line-height: $line-height-base;
+    color: $black;
+ }
