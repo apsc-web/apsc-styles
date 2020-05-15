@@ -1,11 +1,32 @@
-/* Paragraph Element */
+/* Paragraph Element Style */
 p {
-  margin-top: 1.3em;
-  font-size: 1em;
-  line-height: 1.8em;
-
- @include breakPoint(mobile) {
+  @include min-break-point(mobile) {
     font-size: 1.1em;
     line-height: 1.9em;
   }
+
+  margin-top: 1.3em;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+.lead-text {
+  @include min-break-point(mobile) {
+      line-height: 1.5em;
+  }
+
+  @include target-firefox {
+      margin-top: -40px;
+
+      @include min-break-point(mobile) {
+          margin-top: 1.3em;
+      }
+  }
+
+  margin-top: 1.3em;
+  margin-bottom: 20px;
+  color: get-theme-color("color-secondary-1");   
+  font-size: 1.3em;  
+  font-weight: 200; // what is weight 200?
+  line-height: 1.3em;
 }
