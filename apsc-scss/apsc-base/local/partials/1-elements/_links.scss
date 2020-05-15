@@ -1,3 +1,7 @@
 a {
     color: get-theme-color("color-secondary-1");
+    
+    &:hover {
+     color:get-theme-color("color-secondary-1");
+    }
 }
