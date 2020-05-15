@@ -1,5 +1,4 @@
-/* Header Elements */
-
+/* Header Element Styles */
 h1,
 h2,
 h3,
@@ -14,7 +13,7 @@ h1 {
   margin-bottom: 0;
   font-size: 2.25em;
 
-  @include breakPoint(mobile) {
+  @include min-break-point(mobile) {
     margin-top: 1.75em;
     margin-bottom: 10px;
   }
@@ -22,7 +21,7 @@ h1 {
 
 h2 {
   margin-top: 0.9em;
-  color: map-get($map: $apsc-theme, $key: "color-secondary-1");
+  color: get-theme-color("color-secondary-1"); 
 }
 
 h3 {
