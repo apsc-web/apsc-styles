@@ -1,7 +1,7 @@
 /* Mixins */
 
 /* Break Point Mixin */
-@mixin breakPoint($point) {
+@mixin min-break-point($point) {
     @if $point == hd {
         @media only screen and (min-width: $break-hd) { @content; }
     }
@@ -17,4 +17,28 @@
     @else if $point == mobile {
         @media only screen and (min-width: $break-mobile)  { @content; }
     }
+}
+
+/* Browser Mixin */
+@mixin target-firefox {
+    @at-root {
+      @-moz-document url-prefix() {
+        & {
+          @content;
+        }
+      }
+    }
+  }
+  
+@mixin target-internet-explorer {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+/* Vendor Mixin */
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
 }
