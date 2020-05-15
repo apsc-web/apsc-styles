@@ -1,0 +1,27 @@
+/* List Element Style */
+ul, ol {
+    @include min-break-point(mobile) {
+        font-size: 1.05em;
+    }
+    
+    font-size: 0.95em;
+
+    > li {
+        line-height: 1.5em;
+        margin-left: 20px; 
+        margin-bottom: 10px;
+
+        > ul {
+            list-style-type: circle;
+            font-size: 0.9em;
+
+            > li {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+ul {
+    list-style-type: disc;
+}
