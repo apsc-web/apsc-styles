@@ -1,0 +1,50 @@
+.accordion-group {
+  border: none;
+}
+
+.accordion-heading {
+  a {
+    color: #0c2344;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.8em;
+    padding-left: 0;
+
+    @include min-break-point(mobile) {
+      font-size: 1.1em;
+      line-height: 1.9em;
+    }
+
+    &:hover,
+    &:focus {
+      color: #0c2344;
+      background: unset;
+    }
+
+    &::after {
+      font-family: FontAwesome;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      content: "\f067";
+      text-decoration: inherit;
+      display: inline-block;
+      padding: 0 15px;
+      color: $base-link-color;
+    }
+
+    &.focus::after {
+        content: "\f068";
+      }
+  }
+}
+
+.accordion-body {
+  .accordion-inner {
+    padding: 0;
+    border-top: none;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
