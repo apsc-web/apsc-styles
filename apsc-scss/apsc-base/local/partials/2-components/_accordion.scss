@@ -28,15 +28,10 @@
       text-decoration: inherit;
       -webkit-font-smoothing: antialiased;
       content: "\f067";
-      text-decoration: inherit;
       display: inline-block;
       padding: 0 15px;
       color: $base-link-color;
     }
-
-    &.focus::after {
-        content: "\f068";
-      }
   }
 }
 
@@ -47,4 +42,8 @@
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
   }
+}
+
+.focus::after {
+    content: "\f068";
 }
