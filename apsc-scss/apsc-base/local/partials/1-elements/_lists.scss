@@ -1,4 +1,4 @@
-/* List Element Style */
+// List Elements
 .content {
     ul, ol {
         @include min-break-point(mobile) {
