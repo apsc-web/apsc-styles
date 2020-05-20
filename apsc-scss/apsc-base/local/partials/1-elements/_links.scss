@@ -1,7 +1,7 @@
 a {
-    color: get-theme-color("color-secondary-1");
+    color: $base-link-color;
     
     &:hover {
-     color:get-theme-color("color-secondary-1");
+     color:$base-link-color;
     }
 }

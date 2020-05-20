@@ -1,6 +1,6 @@
 //Functions
 @use "sass:map";
 
-@function get-theme-color($color) {
-    @return map.get($theme, $color);
-}
+// @function get-theme-color($color) {
+//     @return map.get($theme, $color);
+// }

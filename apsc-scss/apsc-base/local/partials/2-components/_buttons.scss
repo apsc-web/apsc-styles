@@ -1,32 +1,18 @@
 /* Button Component Styles */
 
-// Local Mixin for setting button color attributes
-@mixin set-btn-attributes($color-font, $color-background, $color-border) {
-  color: $color-font;
-  background-color: $color-background;
-  border-color: $color-border;
-}
 
-// Use this mixin
-@mixin set-btn-colors($color-font, $color-background, $color-border) {
-  @include set-btn-attributes($color-font, $color-background, $color-border);
-  
-  &:hover, &:focus {
-    @include set-btn-attributes($color-background, $color-font, $color-border);
-  }
-}
 
 .btn {
-    @include set-btn-colors($white, get-theme-color("color-primary"), get-theme-color("color-primary"));
+    @include set-btn-colors($default-button-color, $default-button-text-color, $default-button-border-color);
     @include vendor-prefix("box-shadow", "none");
     background-image: none;
 }
 
-.btn-primary {
-    @include set-btn-colors(get-theme-color("color-primary"), $white, get-theme-color("color-primary"));
-    text-transform: uppercase;
-}
+// .btn-primary {
+//     @include set-btn-colors(get-theme-color("color-primary"), $white, get-theme-color("color-primary"));
+//     text-transform: uppercase;
+// }
 
 .btn-secondary {
-    @include set-btn-colors(get-theme-color("color-secondary-1"), $white, get-theme-color("color-secondary-1"));
+    @include set-btn-colors($secondary-button-color, $secondary-button-text-color, $secondary-button-border-color);
 }

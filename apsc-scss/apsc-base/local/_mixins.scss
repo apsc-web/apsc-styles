@@ -19,6 +19,14 @@
     }
 }
 
+@mixin color-modifiers($property: 'color') {
+  @each $name, $hex in $colors-map {
+    &-#{$name} {
+      #{$property}: $hex;
+    }
+  }
+}
+
 /* Browser Mixin */
 @mixin target-firefox {
     @at-root {
@@ -42,3 +50,21 @@
     #{$vendor}#{$name}: #{$value};
   }
 }
+
+// Local Mixin for setting button color attributes
+@mixin set-btn-attributes($color-background, $color-font, $color-border) {
+  color: $color-font;
+  background-color: $color-background;
+  border-color: $color-border;
+}
+
+// Use this mixin
+@mixin set-btn-colors($color-background, $color-font, $color-border) {
+  @include set-btn-attributes($color-background, $color-font, $color-border);
+  
+  &:hover, &:focus {
+    @include set-btn-attributes($color-font, $color-background, $color-border);
+  }
+}
+
+

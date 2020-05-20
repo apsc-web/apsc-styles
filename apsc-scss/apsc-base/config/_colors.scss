@@ -8,8 +8,50 @@ $ubc-secondary-blue-3: #40B4E5;
 $ubc-secondary-blue-4: #6EC4E8;
 $ubc-secondary-blue-5: #97D4E9;
 
+
+$colors-map: (
+    "white": $white,
+    "black": $black,
+    "ubc-primary-blue": $ubc-primary-blue,
+    "ubc-secondary-blue-1": $ubc-secondary-blue-1,
+    "ubc-secondary-blue-2": $ubc-secondary-blue-2,
+    "ubc-secondary-blue-3": $ubc-secondary-blue-3,
+    "ubc-secondary-blue-4": $ubc-secondary-blue-4,
+    "ubc-secondary-blue-5": $ubc-secondary-blue-5
+);
+    
+
+// Theme Configuration?
+
+// Base Typography Color
+$base-font-color: $black !default;
+
+// Link Color
+$base-link-color: $ubc-secondary-blue-1 !default;
+
+// Heading Color
+$heading-2-color: $ubc-secondary-blue-1 !default;
+
+// Lead Text
+$lead-text-color: $ubc-secondary-blue-1 !default;
+
+// Blockquote Color
+$blockquote-color: $ubc-secondary-blue-1 !default;
+
+// Button Colors
+$default-button-color: $white !default;
+$default-button-text-color: $ubc-primary-blue !default;
+$default-button-border-color: $ubc-primary-blue !default;
+
+$secondary-button-color: $white !default;
+$secondary-button-text-color: $ubc-secondary-blue-1 !default;
+$secondary-button-border-color: $ubc-secondary-blue-1 !default;
+
+
 $theme: (
     "color-primary": $ubc-primary-blue,
     "color-secondary-1": $ubc-secondary-blue-1,
     "color-secondary-2": $ubc-secondary-blue-2
 ) !default;
+
+

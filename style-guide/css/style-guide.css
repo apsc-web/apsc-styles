@@ -1,5 +1,4 @@
 /* Basic styling for style guide */
-
 main {
   width: 90%;
   max-width: 1024px;
@@ -52,36 +51,19 @@ section:after {
 }
 
 /* xColor section - basic style */
-.cd-colors ul {
-  list-style: none;
+.cd-color-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
 }
 
-.cd-colors li {
+.cd-color-container .cd-box {
   text-align: center;
-  width: 48%;
-  float: left;
-  margin: 0 4% 1em 0;
 }
-.cd-colors li:nth-of-type(2n) {
-  margin-right: 0;
-}
-.cd-colors .cd-color-swatch {
-  position: relative;
-  width: 100%;
-  padding: 50% 0;
-}
-.cd-colors .cd-color-swatch::before,
-.cd-colors .cd-color-swatch::after {
-  /* lighter and darker color shades of the same swatch */
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-  height: 20%;
-}
-.cd-colors .cd-color-swatch::before {
-  left: 0;
-}
-.cd-colors .cd-color-swatch::after {
-  right: 0;
+
+.cd-color-swatch {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto 10px auto
 }

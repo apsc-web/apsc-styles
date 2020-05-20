@@ -1,0 +1,11 @@
+.this-color-text {
+    @include color-modifiers();
+}
+
+.this-color-background {
+    @include color-modifiers(background-color);
+}
+
+.this-color-border {
+    @include color-modifiers(background-color);
+}

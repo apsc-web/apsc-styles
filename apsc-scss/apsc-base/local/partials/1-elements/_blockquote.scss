@@ -3,7 +3,7 @@ blockquote {
     margin: 3.5em 0 3.5em;
     background: none;
     border: none;
-    color: get-theme-color("color-secondary-1");
+    color: $blockquote-color;
     font-weight: bold; // are we okay with the default weights?
     line-height: 1.3em;
 
@@ -11,7 +11,7 @@ blockquote {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
-        color: get-theme-color("color-secondary-1");
+        color: $blockquote-color;
         font-weight: bold;
         line-height: 1.3em;
     }
