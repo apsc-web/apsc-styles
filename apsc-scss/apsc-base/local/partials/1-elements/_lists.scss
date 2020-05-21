@@ -1,5 +1,6 @@
-// List Elements
-.content {
+/* List Element Styles */
+
+.content { // we have to wrap this in the content area to prevent the nav bar from being affected
     ul, ol {
         @include min-break-point(mobile) {
             font-size: 1.05em;
