@@ -1,12 +1,13 @@
 $white: #fff;
-$black: #222; // off black
+$black: #222;
+$transparent: rgba(0, 0, 0, 0);
 
 $ubc-primary-blue: #002145;
 $ubc-secondary-blue-1: #0055B7;
 $ubc-secondary-blue-2: #00A7E1;
-$ubc-secondary-blue-3: #40B4E5;
-$ubc-secondary-blue-4: #6EC4E8;
-$ubc-secondary-blue-5: #97D4E9;
+$ubc-tertiary-blue-1: #40B4E5;
+$ubc-tertiary-blue-2: #6EC4E8;
+$ubc-tertiary-blue-3: #97D4E9;
 
 
 $colors-map: (
@@ -15,13 +16,12 @@ $colors-map: (
     "ubc-primary-blue": $ubc-primary-blue,
     "ubc-secondary-blue-1": $ubc-secondary-blue-1,
     "ubc-secondary-blue-2": $ubc-secondary-blue-2,
-    "ubc-secondary-blue-3": $ubc-secondary-blue-3,
-    "ubc-secondary-blue-4": $ubc-secondary-blue-4,
-    "ubc-secondary-blue-5": $ubc-secondary-blue-5
+    "ubc-tertiary-blue-1": $ubc-tertiary-blue-1,
+    "ubc-tertiary-blue-2": $ubc-tertiary-blue-2,
+    "ubc-tertiary-blue-3": $ubc-tertiary-blue-3
 );
-    
 
-// Theme Configuration?
+//------ Typography Colors ------ // 
 
 // Base Typography Color
 $base-font-color: $black !default;
@@ -38,20 +38,25 @@ $lead-text-color: $ubc-secondary-blue-1 !default;
 // Blockquote Color
 $blockquote-color: $ubc-secondary-blue-1 !default;
 
-// Button Colors
-$default-button-color: $white !default;
-$default-button-text-color: $ubc-primary-blue !default;
-$default-button-border-color: $ubc-primary-blue !default;
+//------ Button Colors ------ // 
 
-$secondary-button-color: $white !default;
-$secondary-button-text-color: $ubc-secondary-blue-1 !default;
-$secondary-button-border-color: $ubc-secondary-blue-1 !default;
+// Default Button
+$button-default-background-color: $white !default;
+$button-default-text-color: $ubc-primary-blue !default;
+$button-default-border-color: $ubc-primary-blue !default;
 
+// Primary Button
+$button-primary-background-color: $ubc-primary-blue !default;
+$button-primary-text-color: $white !default;
+$button-primary-border-color: $ubc-primary-blue !default;
 
-$theme: (
-    "color-primary": $ubc-primary-blue,
-    "color-secondary-1": $ubc-secondary-blue-1,
-    "color-secondary-2": $ubc-secondary-blue-2
-) !default;
+// Secondary Button
+$button-secondary-background-color: $white !default;
+$button-secondary-text-color: $ubc-secondary-blue-2 !default;
+$button-secondary-border-color: $ubc-secondary-blue-2 !default;
 
-
+// Inverse Button
+$button-inverse-background-color: $transparent !default;
+$button-inverse-text-color: $white !default;
+$button-inverse-border-color: $white !default;
+$button-inverse-text-hover-color: $ubc-primary-blue !default;
