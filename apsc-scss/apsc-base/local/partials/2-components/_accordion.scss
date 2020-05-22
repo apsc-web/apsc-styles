@@ -1,19 +1,31 @@
-.accordion-group {
-  border: none;
+@mixin accordion-sprite() {
+  font-family: FontAwesome;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  content: "\f067";
+  display: inline-block;
+  padding: 0 15px;
+  color: $base-link-color;
 }
 
-.accordion-heading {
-  a {
+.accordion {
+  &-group {
+    border: none;
+  }
+
+  &-heading &-toggle{
+    @include min-break-point(mobile) {
+      font-size: 1.1em;
+      line-height: 1.9em;
+    }
+    
     color: #0c2344;
     text-decoration: none;
     font-size: 1em;
     line-height: 1.8em;
     padding-left: 0;
-
-    @include min-break-point(mobile) {
-      font-size: 1.1em;
-      line-height: 1.9em;
-    }
 
     &:hover,
     &:focus {
@@ -22,25 +34,17 @@
     }
 
     &::after {
-      font-family: FontAwesome;
-      font-weight: 400;
-      font-style: normal;
-      text-decoration: inherit;
-      -webkit-font-smoothing: antialiased;
-      content: "\f067";
-      display: inline-block;
-      padding: 0 15px;
-      color: $base-link-color;
+      @include accordion-sprite();
     }
   }
-}
-
-.accordion-body {
-  .accordion-inner {
-    padding: 0;
-    border-top: none;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+  
+  &-body {
+    &-inner {
+      padding: 0;
+      border-top: none;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+    }
   }
 }
 

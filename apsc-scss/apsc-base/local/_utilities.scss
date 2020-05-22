@@ -11,3 +11,5 @@
 .this-color-border {
     @include color-modifiers(background-color);
 }
+
+// TODO: Make a utility class for gradient
