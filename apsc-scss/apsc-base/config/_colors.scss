@@ -1,5 +1,6 @@
 $white: #fff;
 $black: #222;
+$light-gray: #e5e5e5;
 $transparent: rgba(0, 0, 0, 0);
 
 $ubc-primary-blue: #002145;
@@ -60,3 +61,8 @@ $button-inverse-background-color: $transparent !default;
 $button-inverse-text-color: $white !default;
 $button-inverse-border-color: $white !default;
 $button-inverse-text-hover-color: $ubc-primary-blue !default;
+
+// Accordion Styles
+$accordion-header-color: $ubc-primary-blue !default;
+$accordion-header-icon-color: $ubc-primary-blue !default;
+$accordion-border-color: $light-gray !default;
