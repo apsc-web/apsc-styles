@@ -1,1 +1,27 @@
-// Common Layouts
+/* Common Layouts */
+
+.featured-header-photo {
+    max-height: $cover-photo-height;
+    overflow: hidden;
+    max-width: $break-hd;
+    margin: 0 -20px;
+
+    @include min-break-point(laptop) {
+        margin-left: auto;
+        margin-right: auto;
+    }  
+}
+
+.featured-image {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+    @include min-break-point(mobile) {
+        max-height: 500px;
+    } 
+
+    @include min-break-point(tablet) {
+        height: auto;
+    } 
+}
