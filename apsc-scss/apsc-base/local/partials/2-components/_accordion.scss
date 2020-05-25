@@ -1,53 +1,16 @@
-@mixin accordion-sprite() {
-  font-family: FontAwesome;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  content: "\f067";
-  display: inline-block;
-  padding: 0 15px;
-  color: $base-link-color;
-}
-
+/* Accordion Styles */
 .accordion {
-  &-group {
-    border: none;
-  }
+  @include set-accordion-border-color($accordion-border-color);
+  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $icon-plus, $icon-minus);
 
-  &-heading &-toggle{
-    @include min-break-point(mobile) {
-      font-size: 1.1em;
-      line-height: 1.9em;
-    }
-    
-    color: #0c2344;
-    text-decoration: none;
-    font-size: 1em;
-    line-height: 1.8em;
+  margin-top: 1.25em;
+
+  &-heading &-toggle {
     padding-left: 0;
-
-    &:hover,
-    &:focus {
-      color: #0c2344;
-      background: unset;
-    }
-
-    &::after {
-      @include accordion-sprite();
-    }
   }
-  
-  &-body {
-    &-inner {
-      padding: 0;
-      border-top: none;
-      border-top: 1px solid #e5e5e5;
-      border-bottom: 1px solid #e5e5e5;
-    }
-  }
-}
 
-.focus::after {
-    content: "\f068";
+  &-inner p {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
 }
