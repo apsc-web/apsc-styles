@@ -2,25 +2,41 @@
 
 // Break Point Mixin
 @mixin min-break-point($point) {
-    @if $point == hd {
-        @media only screen and (min-width: $break-hd) { @content; }
+  @if $point==hd {
+    @media only screen and (min-width: $break-hd) {
+      @content;
     }
-    @else if $point == desktop {
-        @media only screen and (min-width: $break-desktop) { @content; }
+  }
+
+  @else if $point==desktop {
+    @media only screen and (min-width: $break-desktop) {
+      @content;
     }
-    @else if $point == laptop {
-        @media only screen and (min-width: $break-laptop) { @content; }
+  }
+
+  @else if $point==laptop {
+    @media only screen and (min-width: $break-laptop) {
+      @content;
     }
-    @else if $point == tablet {
-        @media only screen and (min-width: $break-tablet)  { @content; }
+  }
+
+  @else if $point==tablet {
+    @media only screen and (min-width: $break-tablet) {
+      @content;
     }
-    @else if $point == mobile {
-        @media only screen and (min-width: $break-mobile)  { @content; }
+  }
+
+  @else if $point==mobile {
+    @media only screen and (min-width: $break-mobile) {
+      @content;
     }
+  }
 }
 
 @mixin color-modifiers($property: 'color') {
-  @each $name, $hex in $colors-map {
+
+  @each $name,
+  $hex in $colors-map {
     &-#{$name} {
       #{$property}: $hex;
     }
@@ -28,18 +44,10 @@
 }
 
 // Browser Mixin
-@mixin target-firefox {
-    @at-root {
-      @-moz-document url-prefix() {
-        & {
-          @content;
-        }
-      }
-    }
-  }
-  
 @mixin target-internet-explorer {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
     @content;
   }
 }
@@ -62,13 +70,86 @@
 @mixin set-btn-colors($color-background, $color-text, $color-border, $color-inverse-text:null) {
   @include set-btn-attributes($color-background, $color-text, $color-border);
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     @if $color-inverse-text {
       // Set the background to the border color and text to inverse text color
       @include set-btn-attributes($color-border, $color-inverse-text, $color-border);
-    } @else {
+    }
+
+    @else {
       // We are just inverting the text and background colors
       @include set-btn-attributes($color-text, $color-background, $color-border);
+    }
+  }
+}
+
+// Configures the accordion border properties
+//
+// Parameters
+// $color-border: colour value
+//
+@mixin set-accordion-border-color($color-border) {
+  &-group {
+    border: none;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &-group:nth-child(1) {
+    border-top: 1px solid $color-border;
+  }
+
+  &-inner {
+    padding: 0;
+    border: none; // reset accordion borders
+    border-top: 1px solid $color-border;
+  }
+}
+
+// Configures the accordion-header properties
+//
+// Parameters
+// $color-header: colour value
+// $icon-color: color value
+// $icon-collapse: FontAwesome characer unicode
+// $icon-focus: FontAwesome characer unicode
+// $color-background-hover: (OPTIONAL) color value
+//
+@mixin set-accordion-header-properties($color-header, $icon-color, $icon-collapse, $icon-focus, $color-background-hover: unset) {
+  &-heading {
+    a {
+      @include min-break-point(mobile) {
+        font-size: 1.1em;
+        line-height: 1.9em;
+      }
+  
+      color: $color-header;
+      text-decoration: none;
+      line-height: 1.8em;
+      padding-left: 0;
+  
+      &:hover,
+      &:focus {
+        color: $color-header;
+        background: $color-background-hover;
+      }
+  
+      &::before {
+        display: inline-block;
+        font-family: 'FontAwesome';
+        content: $icon-collapse;
+        color: $icon-color;
+        padding: 0 15px;
+      }
+    }
+
+    .focus::before {
+      content: $icon-focus;
+    }
+  
+    .collapsed::before {
+      content: $icon-collapse;
     }
   }
 }
