@@ -1,7 +1,6 @@
 $white: #fff;
 $black: #222;
 $light-gray: #e5e5e5;
-$transparent: rgba(0, 0, 0, 0);
 
 $ubc-primary-blue: #002145;
 $ubc-secondary-blue-1: #0055B7;
@@ -9,7 +8,6 @@ $ubc-secondary-blue-2: #00A7E1;
 $ubc-tertiary-blue-1: #40B4E5;
 $ubc-tertiary-blue-2: #6EC4E8;
 $ubc-tertiary-blue-3: #97D4E9;
-
 
 $colors-map: (
     "white": $white,
@@ -57,12 +55,12 @@ $button-secondary-text-color: $ubc-secondary-blue-2 !default;
 $button-secondary-border-color: $ubc-secondary-blue-2 !default;
 
 // Inverse Button
-$button-inverse-background-color: $transparent !default;
+$button-inverse-background-color: transparent !default;
 $button-inverse-text-color: $white !default;
 $button-inverse-border-color: $white !default;
 $button-inverse-text-hover-color: $ubc-primary-blue !default;
 
-// Accordion Styles
+//------ Accordion Colors ------ // 
 $accordion-header-color: $ubc-primary-blue !default;
 $accordion-header-icon-color: $ubc-primary-blue !default;
 $accordion-border-color: $light-gray !default;
