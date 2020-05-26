@@ -4,7 +4,8 @@
   "description": "**Purpose:** Base css for all apsc collab sites. It is referenced by all apsc collab sites in production.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-scss": "sass --watch apsc-scss/$PROJECT/$PROJECT.scss:dev/css/dev.css",
+    "build": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:apsc-scss/$PROJECT/$PROJECT.css --no-charset"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "homepage": "https://github.com/apsc-web/collab-css#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "live-server": "^1.2.1",
     "sass": "^1.26.5"
   }
 }
