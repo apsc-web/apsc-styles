@@ -45,7 +45,6 @@
 
 // Browser Mixin
 @mixin target-internet-explorer {
-
   @media all and (-ms-high-contrast: none),
   (-ms-high-contrast: active) {
     @content;
@@ -129,12 +128,15 @@
       line-height: 1.8em;
       padding-left: 0;
   
-      &:hover,
-      &:focus {
-        color: $color-header;
+      &:hover, &:focus, &:active {
+        color: $white;
         background: $color-background-hover;
+
+        &::before{
+          color: $white;
+        }
       }
-  
+      
       &::before {
         display: inline-block;
         font-family: 'FontAwesome';
@@ -151,6 +153,12 @@
     .collapsed::before {
       content: $icon-collapse;
     }
+  }
+}
+
+@mixin content-area-wrap {
+  .content {
+    @content;
   }
 }
 

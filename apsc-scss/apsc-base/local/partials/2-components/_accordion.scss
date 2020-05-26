@@ -1,9 +1,13 @@
 /* Accordion Styles */
 .accordion {
   @include set-accordion-border-color($accordion-border-color);
-  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $icon-plus, $icon-minus);
+  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $icon-plus, $icon-minus, $accordion-header-color);
 
   margin-top: 1.25em;
+
+  &-group {
+    margin-bottom: 0;
+  }
 
   &-heading &-toggle {
     padding-left: 0;
