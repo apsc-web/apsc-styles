@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/* APSC Base Styles */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #222;
+}
+
+/* Common Layouts */
+.featured-header-photo {
+  max-height: 700px;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 -20px;
+}
+@media only screen and (min-width: 980px) {
+  .featured-header-photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.featured-image {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 414px) {
+  .featured-image {
+    max-height: 500px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .featured-image {
+    height: auto;
+  }
+}
+
+/* Utility Classes */
+.this-color-text-white {
+  color: #fff;
+}
+.this-color-text-black {
+  color: #222;
+}
+.this-color-text-ubc-primary-blue {
+  color: #002145;
+}
+.this-color-text-ubc-secondary-blue-1 {
+  color: #0055B7;
+}
+.this-color-text-ubc-secondary-blue-2 {
+  color: #00A7E1;
+}
+.this-color-text-ubc-tertiary-blue-1 {
+  color: #40B4E5;
+}
+.this-color-text-ubc-tertiary-blue-2 {
+  color: #6EC4E8;
+}
+.this-color-text-ubc-tertiary-blue-3 {
+  color: #97D4E9;
+}
+
+.this-color-background-white {
+  background-color: #fff;
+}
+.this-color-background-black {
+  background-color: #222;
+}
+.this-color-background-ubc-primary-blue {
+  background-color: #002145;
+}
+.this-color-background-ubc-secondary-blue-1 {
+  background-color: #0055B7;
+}
+.this-color-background-ubc-secondary-blue-2 {
+  background-color: #00A7E1;
+}
+.this-color-background-ubc-tertiary-blue-1 {
+  background-color: #40B4E5;
+}
+.this-color-background-ubc-tertiary-blue-2 {
+  background-color: #6EC4E8;
+}
+.this-color-background-ubc-tertiary-blue-3 {
+  background-color: #97D4E9;
+}
+
+.this-color-border-white {
+  background-color: #fff;
+}
+.this-color-border-black {
+  background-color: #222;
+}
+.this-color-border-ubc-primary-blue {
+  background-color: #002145;
+}
+.this-color-border-ubc-secondary-blue-1 {
+  background-color: #0055B7;
+}
+.this-color-border-ubc-secondary-blue-2 {
+  background-color: #00A7E1;
+}
+.this-color-border-ubc-tertiary-blue-1 {
+  background-color: #40B4E5;
+}
+.this-color-border-ubc-tertiary-blue-2 {
+  background-color: #6EC4E8;
+}
+.this-color-border-ubc-tertiary-blue-3 {
+  background-color: #97D4E9;
+}
+
+/* Paragraph Element Style */
+p {
+  margin-top: 1.3em;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+@media only screen and (min-width: 414px) {
+  p {
+    font-size: 1.1em;
+    line-height: 1.9em;
+  }
+}
+
+.lead-text {
+  margin-top: 1.3em;
+  margin-bottom: 20px;
+  color: #0055B7;
+  font-size: 1.3em;
+  font-weight: 200;
+  line-height: 1.3em;
+}
+@media only screen and (min-width: 414px) {
+  .lead-text {
+    line-height: 1.5em;
+  }
+}
+
+/* Header Element Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0.525em;
+  margin-bottom: 0;
+  font-size: 2.25em;
+}
+@media only screen and (min-width: 414px) {
+  h1 {
+    margin-top: 1.75em;
+    margin-bottom: 10px;
+  }
+}
+
+h2 {
+  margin-top: 0.9em;
+  color: #0055B7;
+}
+
+h3 {
+  margin-top: 0.9em;
+  font-size: 1.5em;
+}
+
+h4 {
+  margin-top: 0.9em;
+}
+
+/* List Element Styles */
+.content ul, .content ol {
+  font-size: 0.95em;
+}
+@media only screen and (min-width: 414px) {
+  .content ul, .content ol {
+    font-size: 1.05em;
+  }
+}
+.content ul > li, .content ol > li {
+  line-height: 1.5em;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.content ul > li > ul, .content ol > li > ul {
+  list-style-type: circle;
+  font-size: 0.9em;
+}
+.content ul > li > ul > li, .content ol > li > ul > li {
+  margin-bottom: 0;
+}
+.content ul {
+  list-style-type: disc;
+}
+
+/* Blockquote Element Style */
+blockquote {
+  margin: 3.5em 0 3.5em;
+  background: none;
+  border: none;
+  color: #0055B7;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+blockquote p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: #0055B7;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+/* Links Styles */
+a {
+  color: #0055B7;
+}
+a:hover {
+  color: #0055B7;
+}
+
+/* Button Component Styles */
+.btn {
+  color: #002145;
+  background-color: #fff;
+  border-color: #002145;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  background-image: none;
+}
+.btn:hover, .btn:focus, .btn:active {
+  color: #fff;
+  background-color: #002145;
+  border-color: #002145;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #002145;
+  border-color: #002145;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #002145;
+  background-color: #fff;
+  border-color: #002145;
+}
+.btn-secondary {
+  color: #00A7E1;
+  background-color: #fff;
+  border-color: #00A7E1;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #fff;
+  background-color: #00A7E1;
+  border-color: #00A7E1;
+}
+.btn-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active {
+  color: #002145;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* Accordion Styles */
+.accordion {
+  margin-top: 1.25em;
+}
+.accordion-group {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion-group:nth-child(1) {
+  border-top: 1px solid #e5e5e5;
+}
+.accordion-inner {
+  padding: 0 15px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+.accordion-heading a {
+  color: #002145;
+  text-decoration: none;
+  line-height: 1.8em;
+  padding-left: 0;
+}
+@media only screen and (min-width: 414px) {
+  .accordion-heading a {
+    font-size: 1.1em;
+    line-height: 1.9em;
+  }
+}
+.accordion-heading a:hover, .accordion-heading a:focus, .accordion-heading a:active {
+  color: #fff;
+  background: #002145;
+}
+.accordion-heading a:hover::before, .accordion-heading a:focus::before, .accordion-heading a:active::before {
+  color: #fff;
+}
+.accordion-heading a::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  content: "";
+  color: #002145;
+  padding: 0 15px;
+}
+.accordion-heading .focus::before {
+  content: "";
+}
+.accordion-heading .collapsed::before {
+  content: "";
+}
+.accordion-group {
+  margin-bottom: 0;
+}
+.accordion-heading .accordion-toggle {
+  padding-left: 0;
+}
+.accordion-inner p {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+/*# sourceMappingURL=dev.css.map */
