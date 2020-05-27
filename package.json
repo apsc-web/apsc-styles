@@ -4,8 +4,8 @@
   "description": "**Purpose:** Base css for all apsc collab sites. It is referenced by all apsc collab sites in production.",
   "main": "index.js",
   "scripts": {
-    "watch-scss": "sass --watch apsc-scss/$PROJECT/$PROJECT.scss:dev/css/dev.css",
-    "build": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:apsc-scss/$PROJECT/$PROJECT.css --no-charset"
+    "watch": "sass --watch apsc-scss/$PROJECT/$PROJECT.scss:dev/css/dev.css --color",
+    "build": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:dist/$PROJECT.css --no-charset --no-source-map"
   },
   "repository": {
     "type": "git",

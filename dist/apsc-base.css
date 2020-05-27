@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* APSC Base Styles */
 html {
   font-size: 100%;
@@ -146,15 +145,6 @@ p {
 }
 
 /* Header Element Styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-}
-
 h1 {
   margin-top: 0.525em;
   margin-bottom: 0;
@@ -182,28 +172,24 @@ h4 {
 }
 
 /* List Element Styles */
-.content ul, .content ol {
+.content li {
   font-size: 0.95em;
-}
-@media only screen and (min-width: 414px) {
-  .content ul, .content ol {
-    font-size: 1.05em;
-  }
-}
-.content ul > li, .content ol > li {
   line-height: 1.5em;
   margin-left: 20px;
   margin-bottom: 10px;
 }
-.content ul > li > ul, .content ol > li > ul {
+@media only screen and (min-width: 414px) {
+  .content li {
+    font-size: 1.05em;
+  }
+}
+.content ul li {
+  list-style-type: disc;
+}
+.content ul ul li {
   list-style-type: circle;
   font-size: 0.9em;
-}
-.content ul > li > ul > li, .content ol > li > ul > li {
   margin-bottom: 0;
-}
-.content ul {
-  list-style-type: disc;
 }
 
 /* Blockquote Element Style */
@@ -308,12 +294,19 @@ a:hover {
     line-height: 1.9em;
   }
 }
-.accordion-heading a:hover, .accordion-heading a:focus, .accordion-heading a:active {
+.accordion-heading a:hover, .accordion-heading a:focus {
   color: #fff;
   background: #002145;
 }
-.accordion-heading a:hover::before, .accordion-heading a:focus::before, .accordion-heading a:active::before {
+.accordion-heading a:hover::before, .accordion-heading a:focus::before {
   color: #fff;
+}
+.accordion-heading a:active {
+  color: #002145;
+  background: #fff;
+}
+.accordion-heading a:active::before {
+  color: #002145;
 }
 .accordion-heading a::before {
   display: inline-block;
@@ -338,5 +331,3 @@ a:hover {
   margin-top: 0.5em;
   margin-bottom: 1.5em;
 }
-
-/*# sourceMappingURL=dev.css.map */
