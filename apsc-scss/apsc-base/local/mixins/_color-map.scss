@@ -1,0 +1,9 @@
+@mixin color-modifiers($property: 'color') {
+
+    @each $name,
+    $hex in $colors-map {
+        &-#{$name} {
+            #{$property}: $hex;
+        }
+    }
+}

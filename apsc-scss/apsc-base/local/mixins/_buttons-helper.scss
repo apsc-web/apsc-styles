@@ -1,0 +1,27 @@
+// Helpers for configuring button component
+
+// Local Mixin for setting button color attributes
+@mixin set-btn-attributes($color-background, $color-text, $color-border) {
+  color: $color-text;
+  background-color: $color-background;
+  border-color: $color-border;
+}
+
+// Use this mixin to set button colors
+@mixin set-btn-colors($color-background, $color-text, $color-border, $color-inverse-text:null) {
+  @include set-btn-attributes($color-background, $color-text, $color-border);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @if $color-inverse-text {
+      // Set the background to the border color and text to inverse text color
+      @include set-btn-attributes($color-border, $color-inverse-text, $color-border);
+    }
+
+    @else {
+      // We are just inverting the text and background colors
+      @include set-btn-attributes($color-text, $color-background, $color-border);
+    }
+  }
+}

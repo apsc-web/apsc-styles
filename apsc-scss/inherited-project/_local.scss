@@ -1,8 +1,9 @@
-/* import base-layer local components  */
-@import "../apsc-base/local.scss";
+// Import APSC Base local
+@import "/apsc-base/local";
 
-/* local font */
+// Import local font
+// @import "local/fonts"
 
-/* local components*/
-@import "local/elements.scss";
-@import "local/components.scss";
+// Import local components
+// @import "local/elements.scss";
+// @import "local/components.scss";

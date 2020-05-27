@@ -1,29 +1,30 @@
 /* List Element Styles */
 
-.content { // we have to wrap this in the content area to prevent the nav bar from being affected
-    ul, ol {
+.content {
+    // we have to wrap this in the content area to prevent the nav bar from being affected
+    
+    li {
         @include min-break-point(mobile) {
             font-size: 1.05em;
         }
+
         font-size: 0.95em;
-    
-        > li {
-            line-height: 1.5em;
-            margin-left: 20px; 
-            margin-bottom: 10px;
-    
-            > ul {
+        line-height: 1.5em;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        li {
+            list-style-type: disc;
+        }
+
+        ul {
+            li {
                 list-style-type: circle;
                 font-size: 0.9em;
-    
-                > li {
-                    margin-bottom: 0;
-                }
+                margin-bottom: 0;
             }
         }
-    }
-    
-    ul {
-        list-style-type: disc;
     }
 }
