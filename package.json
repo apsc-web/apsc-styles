@@ -2,10 +2,10 @@
   "name": "collab-css",
   "version": "1.0.0",
   "description": "**Purpose:** Base css for all apsc collab sites. It is referenced by all apsc collab sites in production.",
-  "main": "index.js",
   "scripts": {
     "watch": "sass --watch apsc-scss/$PROJECT/$PROJECT.scss:dev/css/dev.css --color",
-    "build": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:dist/$PROJECT.css --no-charset --no-source-map"
+    "compile": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:dist/$PROJECT.css --no-charset --no-source-map",
+    "create-project": "cp -R apsc-scss/inherited-project apsc-scss/$PROJECT && mv apsc-scss/$PROJECT/inherited-project.scss apsc-scss/$PROJECT/$PROJECT.scss"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,10 @@
     "url": "https://github.com/apsc-web/collab-css/issues"
   },
   "homepage": "https://github.com/apsc-web/collab-css#readme",
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
   "devDependencies": {
-    "live-server": "^1.2.1",
     "sass": "^1.26.5"
   }
 }
