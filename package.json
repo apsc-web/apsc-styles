@@ -17,9 +17,7 @@
     "url": "https://github.com/apsc-web/collab-css/issues"
   },
   "homepage": "https://github.com/apsc-web/collab-css#readme",
-  "dependencies": {
-    "http-server": "^0.12.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "sass": "^1.26.5"
   }
