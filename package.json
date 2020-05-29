@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "**Purpose:** Base css for all apsc collab sites. It is referenced by all apsc collab sites in production.",
   "scripts": {
-    "watch": "sass --watch apsc-scss/$PROJECT/$PROJECT.scss:dev/css/dev.css --color",
-    "compile": "sass --update apsc-scss/$PROJECT/$PROJECT.scss:dist/$PROJECT.css --no-charset --no-source-map",
-    "create-project": "cp -R apsc-scss/inherited-project apsc-scss/$PROJECT && mv apsc-scss/$PROJECT/inherited-project.scss apsc-scss/$PROJECT/$PROJECT.scss"
+    "watch": "sass --watch apsc-scss/$npm_config_project/$npm_config_project.scss:dev/css/dev.css --color",
+    "compile": "sass --update apsc-scss/$npm_config_project/$npm_config_project.scss:dist/$npm_config_project.css --no-charset --no-source-map",
+    "create-project": "cp -R apsc-scss/inherited-project apsc-scss/$npm_config_project && mv apsc-scss/$npm_config_project/inherited-project.scss apsc-scss/$npm_config_project/$npm_config_project.scss"
   },
   "repository": {
     "type": "git",
