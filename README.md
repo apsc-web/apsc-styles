@@ -1,5 +1,5 @@
-## ASPC Styles
-Source SCSS for all ASPC sites.
+## APSC Styles
+Source SCSS for all APSC sites.
 
 ## 🔎 Getting Started
 
