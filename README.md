@@ -1,4 +1,4 @@
-## ASPC STYLES
+## ASPC Styles
 Source SCSS for all ASPC sites.
 
 ## 🔎 Getting Started
