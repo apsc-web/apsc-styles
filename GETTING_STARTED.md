@@ -4,6 +4,7 @@
 - [Install Dependencies](#install-dependencies)
 - [Create Your First Project](#create-your-first-project)
 - [Command Line Tool](#command-line-tools)
+- [Start Local Server](#start-local-server)
 
 ## VSCode
 
@@ -55,3 +56,7 @@ npm run compile --project=<project-name>
 ```
 
 A minified project CSS file will be created in the dist folder.
+
+## Start Local Server
+
+Open ```index.html``` page in the dev folder and the start the local server using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Extension (bottom bar in VSCode editor window). The local server will automatically watch for any changes in your SCSS code.
