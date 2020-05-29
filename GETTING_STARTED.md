@@ -39,6 +39,8 @@ npm run create-project --project=<project-name>
 
 A new project will be created in apsc-scss with your project name
 
+<br />
+
 ## Command Line Tools
 
 To watch your project SCSS:
@@ -47,6 +49,8 @@ To watch your project SCSS:
 npm run watch --project=<project-name>
 ```
 Sass will watch for any changes to SCSS files in the project folder, it will get compiled into the dev.css in the dev folder.  
+
+<br />
 
 To compile and minify your project CSS
 
