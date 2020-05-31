@@ -1,6 +1,6 @@
 ## 🔎 Getting Started
 
-- [VSCode](#vscode)
+- [Visual Studio Code](#vscode)
 - [Install Dependencies](#install-dependencies)
 - [Create Your First Project](#create-your-first-project)
 - [Command Line Tool](#command-line-tools)
@@ -8,7 +8,7 @@
 
 ## VSCode
 
-APSC recommends using [VSCode](https://code.visualstudio.com/) as your code editor.
+APSC recommends using [Visual Studio Code](https://code.visualstudio.com/) as your code editor.
 
 The following extensions are recommended:
 
