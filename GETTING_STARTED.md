@@ -1,12 +1,12 @@
 ## 🔎 Getting Started
 
-- [Visual Studio Code](#vscode)
+- [Visual Studio Code](#visual-studio-code)
 - [Install Dependencies](#install-dependencies)
 - [Create Your First Project](#create-your-first-project)
 - [Command Line Tool](#command-line-tools)
 - [Start Local Server](#start-local-server)
 
-## VSCode
+## Visual Studio Code
 
 APSC recommends using [Visual Studio Code](https://code.visualstudio.com/) as your code editor.
 
