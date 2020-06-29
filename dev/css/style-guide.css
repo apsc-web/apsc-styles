@@ -1,7 +1,6 @@
 /* Basic styling for style guide */
 main {
   width: 90%;
-  max-width: 1024px;
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -66,4 +65,12 @@ section:after {
   width: 100px;
   height: 100px;
   margin: 10px auto 10px auto
+}
+
+.cd-flickity {
+  background-color: #efefef;
+}
+
+.cd-flickity .cd-box {
+  background-color: #efefef;
 }
