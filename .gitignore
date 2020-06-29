@@ -1,4 +1,3 @@
 node_modules/
 
-dev/css/dev.css
-dev/css/dev.css.map
+css/
