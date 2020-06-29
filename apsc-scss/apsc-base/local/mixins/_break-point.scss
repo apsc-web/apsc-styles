@@ -29,4 +29,10 @@
         @content;
       }
     }
+
+    @else {
+      @media only screen and (min-width: $point) {
+        @content;
+      }
+    }
   }
