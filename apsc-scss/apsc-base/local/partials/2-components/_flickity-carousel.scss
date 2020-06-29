@@ -1,0 +1,129 @@
+.carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+  @include vendor-prefix(display, flex);
+  flex-direction: column;
+
+  @include min-break-point(laptop) {
+    flex-direction: row;
+  }
+
+  &__image {
+    height: 320px;
+    min-height: 320px;
+    width: 100%;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+
+    @include min-break-point(laptop) {
+      height: 400px;
+      width: 400px;
+      min-height: 400px;
+      min-width: 400px;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include min-break-point(laptop) {
+      padding: 20px 65px 0 40px;
+    }
+
+    &__title {
+      color: #0055b7;
+      font-size: 22px;
+      text-transform: none;
+    }
+
+    &__excerpt p {
+      color: #0c2344;
+      font-size: .9em;
+      line-height: 1.5em;
+    }
+  }
+
+  &__featured-label {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.flickity-button {
+  background-color: transparent;
+  border: 1px solid #0055b7;
+  color: #0055b7;
+}
+
+.flickity-prev-next-button {
+  &.previous,
+  &.next {
+    top: auto;
+    bottom: -85px;
+  }
+  
+  &.previous {
+    left: 5%;
+  }
+
+  &.next {
+    right: 5%;
+  }
+
+  @include min-break-point(1024px) {
+    &.previous {
+      left: 0;
+    }
+  
+    &.next {
+      right: 0;
+    }
+  }
+
+  @include min-break-point(laptop) {
+    &.previous,
+    &.next {
+      top: 50%;
+      bottom: 0;
+    }
+
+    &.right {
+      right: -54px;
+    }
+  }
+
+  @include min-break-point(1460px) {
+    &.previous {
+      left: -70px;
+    }
+  }
+}
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -45px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+
+  @include min-break-point(laptop) {
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -30px;
+  }
+
+  .dot {
+    background: $ubc-secondary-blue-1;
+  }
+}
