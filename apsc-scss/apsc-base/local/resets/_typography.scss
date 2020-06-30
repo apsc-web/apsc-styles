@@ -1,5 +1,7 @@
 html{ 
-    font-size: 100%; // for use with REM units
+    font-size: 100%; // for sue with REM units
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
 }
 
 body{
