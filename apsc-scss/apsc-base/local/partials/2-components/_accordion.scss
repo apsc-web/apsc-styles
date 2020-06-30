@@ -1,7 +1,7 @@
 /* Accordion Styles */
 .accordion {
   @include set-accordion-border-color($accordion-border-color);
-  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $icon-plus, $icon-minus, $accordion-header-color);
+  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $sprite-icon-plus, $sprite-icon-minus, $accordion-header-color);
 
   margin-top: 1.25em;
 
