@@ -57,8 +57,6 @@
         $button-default-text-color, 
         $button-default-border-color
     );
-    // @include vendor-prefix("box-shadow", "none");
-    background-image: none;
 
     &-primary {
         @include set-button-colors(
