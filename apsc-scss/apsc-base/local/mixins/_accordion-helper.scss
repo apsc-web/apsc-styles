@@ -6,77 +6,95 @@
 // $color-border: colour value
 //
 @mixin set-accordion-border-color($color-border) {
-    &-group {
-      border: none;
-      border-bottom: 1px solid $color-border;
-    }
-  
-    &-group:nth-child(1) {
-      border-top: 1px solid $color-border;
-    }
-  
-    &-inner {
-      padding: 0 15px;
-      border: none; // reset accordion borders
-      border-top: 1px solid $color-border;
-    }
+  &-group {
+    border: none;
+    border-bottom: 1px solid $color-border;
   }
-  
-  // Configures the accordion-header properties
-  //
-  // Parameters
-  // $color-header: colour value
-  // $icon-color: color value
-  // $icon-collapse: FontAwesome characer unicode
-  // $icon-focus: FontAwesome characer unicode
-  // $color-background-hover: (OPTIONAL) color value
-  //
-  @mixin set-accordion-header-properties($color-header, $icon-color, $icon-collapse, $icon-focus, $color-background-hover: unset) {
-    &-heading {
-      a {
-        @include min-break-point(mobile) {
-          font-size: 1.1em;
-          line-height: 1.9em;
-        }
-    
-        color: $color-header;
-        text-decoration: none;
-        line-height: 1.8em;
-        padding-left: 0;
-    
-        &:hover, &:focus {
-          color: $white;
-          background: $color-background-hover;
-  
-          &::before{
-            color: $white;
-          }
-        }
-        
-        &:active {
-          color: $color-header;
-          background: $white;
-  
-          &::before{
-            color: $color-header;
-          }
-        }
+
+  &-group:nth-child(1) {
+    border-top: 1px solid $color-border;
+  }
+
+  &-inner {
+    padding: 0 15px;
+    border: none; // reset accordion borders
+    border-top: 1px solid $color-border;
+  }
+}
+
+// Configures the accordion-header properties
+//
+// Parameters
+// $color-header: colour value
+// $icon-color: color value
+// $icon-collapse: FontAwesome characer unicode
+// $icon-focus: FontAwesome characer unicode
+// $color-background-hover: (OPTIONAL) color value
+//
+@mixin set-accordion-header-properties(
+  // $color-header,
+  // $icon-color,
+  // $icon-collapse,
+  // $icon-focus,
+  // $color-background-hover: unset
+  $config
+) 
+
+{
+  $header: map-get($config, 'header');
+  $header-hover: map-get($config, 'header-hover');
+  &-heading {
+    a {
+      @include min-break-point(mobile) {
+        font-size: 1.1em;
+        line-height: 1.9em;
+      }
+
+      color: map-get($header, 'color');
+      background: map-get($header, 'background');
+      text-decoration: none;
+      line-height: 1.8em;
+      padding-left: 0;
+
+      &:hover,
+      &:focus {
+        color: map-get($header-hover, 'color');
+        background: map-get($header-hover, 'background');
 
         &::before {
-          display: inline-block;
-          font-family: 'FontAwesome';
-          content: $icon-collapse;
-          color: $icon-color;
-          padding: 0 15px;
+          color: map-get($header-hover, 'color');
         }
       }
-  
-      .focus::before {
-        content: $icon-focus;
+
+      &:active {
+        color: map-get($header, 'color');
+        background: map-get($header, 'background');
+
+        &::before {
+          color: map-get($header, 'color');
+        }
       }
-    
-      .collapsed::before {
-        content: $icon-collapse;
+
+      &::before {
+        display: inline-block;
+        font-family: 'FontAwesome';
+        content: map-get($config, 'sprite-open');
+        color: map-get($header, 'sprite');
+        padding: 0 15px;
       }
     }
+
+    .focus::before {
+      content: map-get($config, 'sprite-collapsed');
+    }
+
+    .collapsed::before {
+      content: map-get($config, 'sprite-open');
+    }
   }
+}
+
+@mixin set-accordion-properties($config) {
+  @include set-accordion-border-color(map-get($config, 'border'));
+  @include set-accordion-header-properties($config);
+}

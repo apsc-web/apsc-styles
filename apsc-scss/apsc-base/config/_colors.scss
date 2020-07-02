@@ -109,7 +109,16 @@ $blockquote-config: (
 
 
 //------ Accordion Colors ------ //
-$accordion-header-color: $ubc-primary-blue !default;
-$accordion-header-icon-color: $ubc-primary-blue !default;
-$accordion-border-color: $light-gray !default;
-$accordion-header-hover-color: $ubc-tertiary-blue-2 !default;
+$accordion-color-config: (
+  'header': (
+    'color': $ubc-primary-blue,
+    'background': $white,
+    'sprite':  $ubc-primary-blue
+  ),
+  'header-hover': (
+    'color': $white,
+    'background': $ubc-primary-blue,
+    'sprite':  $white
+  ),
+  'border': $light-gray
+) !default;
