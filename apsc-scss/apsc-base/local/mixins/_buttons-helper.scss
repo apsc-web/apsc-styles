@@ -32,8 +32,8 @@
   &:hover,
   &:focus {
     @if $inverse-text {
-      @include set-button-attributes($background, $inverse-text, $border);
-    } else {
+      @include set-button-attributes($background, $inverse-text, $inverse-text);
+    } @else {
       @include set-button-attributes($text, $background, $border);
     }
   }
