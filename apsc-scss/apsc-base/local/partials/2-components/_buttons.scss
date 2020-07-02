@@ -1,6 +1,7 @@
 /* Button Component Styles */
 .button {
     display: inline-block;
+    box-sizing: border-box;
     padding: 2% 7%;
     margin-bottom: 0;
     font-size: 1rem;
@@ -12,37 +13,27 @@
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    box-shadow: none;
     border: 1px solid;
     
     @include set-button-colors(
-        $button-default-background-color, 
-        $button-default-text-color, 
-        $button-default-border-color
+        $button-config
     );
 
     &-primary {
         @include set-button-colors(
-            $button-primary-background-color, 
-            $button-primary-text-color, 
-            $button-primary-border-color
+            $button-primary-config
         );
     }
 
     &-secondary {
         @include set-button-colors(
-            $button-secondary-background-color, 
-            $button-secondary-text-color, 
-            $button-secondary-border-color
+            $button-secondary-config
         );
     }
 
     &-inverse {
         @include set-button-colors(
-            $button-inverse-background-color, 
-            $button-inverse-text-color, 
-            $button-inverse-border-color,
-            $button-inverse-text-hover-color
+            $button-inverse-config
         );
     }
 }
