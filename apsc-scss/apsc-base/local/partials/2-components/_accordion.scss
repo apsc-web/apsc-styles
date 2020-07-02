@@ -5,7 +5,7 @@ $accordion-sprites-config: (
 ) !default;
 
 .accordion {
-  @include set-accordion-properties(map-merge($accordion-color-config, $accordion-sprites-config));
+  @include set-accordion-properties($accordion-color-config, $accordion-sprites-config);
 
   margin-top: 1.25em;
 

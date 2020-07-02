@@ -1,9 +1,6 @@
 // Helpers for configuring accordion component
 
-// Configures the accordion border properties
-//
-// Parameters
-// $color-border: colour value
+// Configures the accordion border property
 //
 @mixin set-accordion-border-color($color-border) {
   &-group {
@@ -23,26 +20,10 @@
 }
 
 // Configures the accordion-header properties
-//
-// Parameters
-// $color-header: colour value
-// $icon-color: color value
-// $icon-collapse: FontAwesome characer unicode
-// $icon-focus: FontAwesome characer unicode
-// $color-background-hover: (OPTIONAL) color value
-//
-@mixin set-accordion-header-properties(
-  // $color-header,
-  // $icon-color,
-  // $icon-collapse,
-  // $icon-focus,
-  // $color-background-hover: unset
-  $config
-) 
-
-{
-  $header: map-get($config, 'header');
-  $header-hover: map-get($config, 'header-hover');
+@mixin set-accordion-header-properties($color-config, $sprites-config) {
+  $header: map-get($color-config, 'header');
+  $header-hover: map-get($color-config, 'header-hover');
+  
   &-heading {
     a {
       @include min-break-point(mobile) {
@@ -78,23 +59,23 @@
       &::before {
         display: inline-block;
         font-family: 'FontAwesome';
-        content: map-get($config, 'sprite-open');
+        content: map-get($sprites-config, 'sprite-open');
         color: map-get($header, 'sprite');
         padding: 0 15px;
       }
     }
 
     .focus::before {
-      content: map-get($config, 'sprite-collapsed');
+      content: map-get($sprites-config, 'sprite-collapsed');
     }
 
     .collapsed::before {
-      content: map-get($config, 'sprite-open');
+      content: map-get($sprites-config, 'sprite-open');
     }
   }
 }
 
-@mixin set-accordion-properties($config) {
-  @include set-accordion-border-color(map-get($config, 'border'));
-  @include set-accordion-header-properties($config);
+@mixin set-accordion-properties($color-config, $sprites-config) {
+  @include set-accordion-border-color(map-get($color-config, 'border'));
+  @include set-accordion-header-properties($color-config, $sprites-config);
 }
