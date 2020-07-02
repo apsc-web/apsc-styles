@@ -7,7 +7,7 @@ html {
 body {
     font-family: $font-primary;
     font-size: $font-size-base;
-    font-weight: $font-weight-normal; // should we include this in a map?
+    font-weight: $font-light; // should we include this in a map?
     line-height: $line-height-base;
     color: $black;
     -webkit-font-smoothing: antialiased;
