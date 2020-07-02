@@ -95,6 +95,19 @@ $button-inverse-config: (
   'text-inverse': $black
 ) !default;
 
+//------ Blockquote colours ------ //
+$blockquote-config: (
+  'default': (
+    'background': $ubc-primary-blue,
+    'text': $white
+  ),
+  'inverse': (
+    'background': transparent,
+    'text': $ubc-primary-blue
+  )
+) !default;
+
+
 //------ Accordion Colors ------ //
 $accordion-header-color: $ubc-primary-blue !default;
 $accordion-header-icon-color: $ubc-primary-blue !default;

@@ -1,0 +1,7 @@
+// Helpers for configuring blockquote component
+
+// Use this mixin to set blockquote color attributes
+@mixin set-blockquote-colors($config) {
+  background-color: map-get($config, 'background');
+  color: map-get($config, 'text');
+}

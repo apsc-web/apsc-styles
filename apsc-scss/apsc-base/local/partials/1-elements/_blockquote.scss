@@ -1,19 +1,37 @@
 /* Blockquote Element Style */
 
-blockquote { 
-    margin: 3.5em 0 3.5em;
-    background: none;
-    border: none;
-    color: $blockquote-color;
-    font-weight: bold; // are we okay with the default weights?
-    line-height: 1.3em;
+blockquote {
+  @include set-blockquote-colors(map-get($blockquote-config, 'default'));
+  width: 430px;
+  padding: 30px;
+  border: none;
 
-    p {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        color: $blockquote-color;
-        font-weight: bold;
-        line-height: 1.3em;
-    }
+  p {
+    font-weight: $font-bold;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin: 0;
+  }
 }
+
+.blockquote {
+    &__quote {
+      font-size: 1rem;
+      font-weight: $font-semi-bold;
+      margin-bottom: 50px;
+    }
+    &__quotee {
+      font-size: 14px;
+      font-weight: $font-light;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    &--inverse {
+      @include set-blockquote-colors(map-get($blockquote-config, 'inverse'));
+      .blockquote__quotee {
+        text-align: left;
+      }
+    }
+  }
