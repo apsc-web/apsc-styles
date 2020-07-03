@@ -1,36 +1,39 @@
 /* Button Component Styles */
-
-.btn {
-    @include set-btn-colors(
-        $button-default-background-color, 
-        $button-default-text-color, 
-        $button-default-border-color
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2% 7%;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid;
+    
+    @include set-button-colors(
+        $button-config
     );
-    @include vendor-prefix("box-shadow", "none");
-    background-image: none;
 
     &-primary {
-        @include set-btn-colors(
-            $button-primary-background-color, 
-            $button-primary-text-color, 
-            $button-primary-border-color
+        @include set-button-colors(
+            $button-primary-config
         );
     }
 
     &-secondary {
-        @include set-btn-colors(
-            $button-secondary-background-color, 
-            $button-secondary-text-color, 
-            $button-secondary-border-color
+        @include set-button-colors(
+            $button-secondary-config
         );
     }
 
     &-inverse {
-        @include set-btn-colors(
-            $button-inverse-background-color, 
-            $button-inverse-text-color, 
-            $button-inverse-border-color,
-            $button-inverse-text-hover-color
+        @include set-button-colors(
+            $button-inverse-config
         );
     }
 }

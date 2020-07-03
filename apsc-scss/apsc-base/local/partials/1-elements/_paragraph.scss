@@ -1,24 +1,27 @@
 /* Paragraph Element Style */
 
 p {
-  @include min-break-point(mobile) {
-    font-size: 1.1em;
-    line-height: 1.9em;
+  margin-top: 1.1em;
+  font-size: 1rem;
+  font-weight: $font-book;
+  line-height: 1.8em; 
+  
+  @include min-break-point(tablet) {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
   }
-  margin-top: 1.3em;
-  font-size: 1em;
-  line-height: 1.8em;
 }
 
-.lead-text {
-  @include min-break-point(mobile) {
-      line-height: 1.5em;
-  }
-
+.lead {
   margin-top: 1.3em;
   margin-bottom: 20px;
   color: $lead-text-color;   
-  font-size: 1.3em;  
-  font-weight: 200; // what is weight 200?
-  line-height: 1.3em;
+  font-size: 1.3rem;  
+  font-weight: $font-book; // what is weight 200?
+  line-height: 1.95rem;
+
+  @include min-break-point(tablet) {
+    font-size: 1.8rem; 
+    line-height: 2.52rem;
+}
 }

@@ -1,7 +1,11 @@
 /* Accordion Styles */
+$accordion-sprites-config: (
+  'focus': $sprite-icon-plus,
+  'collapsed': $sprite-icon-minus
+) !default;
+
 .accordion {
-  @include set-accordion-border-color($accordion-border-color);
-  @include set-accordion-header-properties($accordion-header-color, $accordion-header-icon-color, $icon-plus, $icon-minus, $accordion-header-color);
+  @include set-accordion-properties($accordion-color-config, $accordion-sprites-config);
 
   margin-top: 1.25em;
 

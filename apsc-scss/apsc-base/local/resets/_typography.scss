@@ -1,11 +1,16 @@
-html{ 
-    font-size: 100%; // for use with REM units
+html {
+    font-size: 100%; // for sue with REM units
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
 }
 
-body{
+body {
     font-family: $font-primary;
     font-size: $font-size-base;
-    font-weight: 400; // should we include this in a map?
+    font-weight: $font-light; // should we include this in a map?
     line-height: $line-height-base;
     color: $black;
- }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+}

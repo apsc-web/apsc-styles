@@ -3,24 +3,24 @@ $black: #222;
 $light-gray: #e5e5e5;
 
 $ubc-primary-blue: #002145;
-$ubc-secondary-blue-1: #0055B7;
-$ubc-secondary-blue-2: #00A7E1;
-$ubc-tertiary-blue-1: #40B4E5;
-$ubc-tertiary-blue-2: #6EC4E8;
-$ubc-tertiary-blue-3: #97D4E9;
+$ubc-secondary-blue-1: #0055b7;
+$ubc-secondary-blue-2: #00a7e1;
+$ubc-tertiary-blue-1: #40b4e5;
+$ubc-tertiary-blue-2: #6ec4e8;
+$ubc-tertiary-blue-3: #97d4e9;
 
 $colors-map: (
-    "white": $white,
-    "black": $black,
-    "ubc-primary-blue": $ubc-primary-blue,
-    "ubc-secondary-blue-1": $ubc-secondary-blue-1,
-    "ubc-secondary-blue-2": $ubc-secondary-blue-2,
-    "ubc-tertiary-blue-1": $ubc-tertiary-blue-1,
-    "ubc-tertiary-blue-2": $ubc-tertiary-blue-2,
-    "ubc-tertiary-blue-3": $ubc-tertiary-blue-3
+  'white': $white,
+  'black': $black,
+  'ubc-primary-blue': $ubc-primary-blue,
+  'ubc-secondary-blue-1': $ubc-secondary-blue-1,
+  'ubc-secondary-blue-2': $ubc-secondary-blue-2,
+  'ubc-tertiary-blue-1': $ubc-tertiary-blue-1,
+  'ubc-tertiary-blue-2': $ubc-tertiary-blue-2,
+  'ubc-tertiary-blue-3': $ubc-tertiary-blue-3,
 );
 
-//------ Typography Colors ------ // 
+//------ Typography Colors ------ //
 
 // Base Typography Color
 $base-font-color: $black !default;
@@ -29,6 +29,9 @@ $base-font-color: $black !default;
 $base-link-color: $ubc-secondary-blue-1 !default;
 
 // Heading Color
+$heading-color: $ubc-primary-blue !default;
+
+// H2 Color
 $heading-2-color: $ubc-secondary-blue-1 !default;
 
 // Lead Text
@@ -37,31 +40,85 @@ $lead-text-color: $ubc-secondary-blue-1 !default;
 // Blockquote Color
 $blockquote-color: $ubc-secondary-blue-1 !default;
 
-//------ Button Colors ------ // 
+//------ Button Colors ------ //
 
 // Default Button
-$button-default-background-color: $white !default;
-$button-default-text-color: $ubc-primary-blue !default;
-$button-default-border-color: $ubc-primary-blue !default;
+$button-config: (
+  'background': $white,
+  'text': $ubc-primary-blue,
+  'border': $ubc-primary-blue,
+  'active': (
+    'background': rgba(0, 33, 69, 0.86),
+    'text': $white,
+    'border': $ubc-primary-blue,
+    'box-shadow': inset 0px 4px 8px rgba(0, 0, 0, 0.25)
+  )
+) !default;
 
 // Primary Button
-$button-primary-background-color: $ubc-primary-blue !default;
-$button-primary-text-color: $white !default;
-$button-primary-border-color: $ubc-primary-blue !default;
+$button-primary-config: (
+  'background': $ubc-primary-blue,
+  'text': $white,
+  'border': $ubc-primary-blue,
+  'active': (
+    'background': #FCFCFC,
+    'text': $ubc-primary-blue,
+    'border': $ubc-primary-blue,
+    'box-shadow': (inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(0, 0, 0, 0.1))
+  )
+) !default;
 
 // Secondary Button
-$button-secondary-background-color: $white !default;
-$button-secondary-text-color: $ubc-secondary-blue-2 !default;
-$button-secondary-border-color: $ubc-secondary-blue-2 !default;
+$button-secondary-config: (
+  'background': $white,
+  'text': $ubc-secondary-blue-2,
+  'border': $ubc-secondary-blue-2,
+  'active': (
+    'background': $ubc-secondary-blue-2,
+    'text': $white,
+    'border': $ubc-secondary-blue-2,
+    'box-shadow': inset 4px 4px 15px rgba(0, 0, 0, 0.25)
+  )
+) !default;
 
 // Inverse Button
-$button-inverse-background-color: transparent !default;
-$button-inverse-text-color: $white !default;
-$button-inverse-border-color: $white !default;
-$button-inverse-text-hover-color: $ubc-primary-blue !default;
+$button-inverse-config: (
+  'background': transparent,
+  'text': $white,
+  'border': $white,
+  'active': (
+    'background': rgba($white, 0.95),
+    'text': $black,
+    'border': $ubc-primary-blue,
+    'box-shadow': (inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(0, 0, 0, 0.1))
+  ),
+  'text-inverse': $black
+) !default;
 
-//------ Accordion Colors ------ // 
-$accordion-header-color: $ubc-primary-blue !default;
-$accordion-header-icon-color: $ubc-primary-blue !default;
-$accordion-border-color: $light-gray !default;
-$accordion-header-hover-color: $ubc-tertiary-blue-2 !default;
+//------ Blockquote colours ------ //
+$blockquote-config: (
+  'default': (
+    'background': $ubc-primary-blue,
+    'text': $white
+  ),
+  'inverse': (
+    'background': transparent,
+    'text': $ubc-primary-blue
+  )
+) !default;
+
+
+//------ Accordion Colors ------ //
+$accordion-color-config: (
+  'header': (
+    'color': $ubc-primary-blue,
+    'background': $white,
+    'sprite':  $ubc-primary-blue
+  ),
+  'header-hover': (
+    'color': $white,
+    'background': $ubc-primary-blue,
+    'sprite':  $white
+  ),
+  'border': $light-gray
+) !default;
