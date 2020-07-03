@@ -2,7 +2,7 @@
 
 blockquote {
   @include set-blockquote-colors(map-get($blockquote-config, 'default'));
-  width: 430px;
+  max-width: 430px;
   padding: 30px;
   border: none;
 
