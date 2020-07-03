@@ -59,18 +59,18 @@
       &::before {
         display: inline-block;
         font-family: 'FontAwesome';
-        content: map-get($sprites-config, 'sprite-open');
+        content: map-get($sprites-config, 'focus');
         color: map-get($header, 'sprite');
         padding: 0 15px;
       }
     }
 
     .focus::before {
-      content: map-get($sprites-config, 'sprite-collapsed');
+      content: map-get($sprites-config, 'collapsed');
     }
 
     .collapsed::before {
-      content: map-get($sprites-config, 'sprite-open');
+      content: map-get($sprites-config, 'focus');
     }
   }
 }

@@ -1,7 +1,7 @@
 /* Accordion Styles */
 $accordion-sprites-config: (
-  'sprite-open': $sprite-icon-plus,
-  'sprite-collapsed': $sprite-icon-minus
+  'focus': $sprite-icon-plus,
+  'collapsed': $sprite-icon-minus
 ) !default;
 
 .accordion {
